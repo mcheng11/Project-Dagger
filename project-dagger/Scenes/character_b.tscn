@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b00f7yc86owcq"]
+
+[ext_resource type="Texture2D" uid="uid://dfe5e7tuwcvmn" path="res://icon.svg" id="1_u135x"]
+[ext_resource type="Script" uid="uid://05udokb76qgh" path="res://CharacterB.gd" id="2_p6gjv"]
+
+[node name="Character B" type="Sprite2D" unique_id=1042527097]
+texture = ExtResource("1_u135x")
+flip_v = true
+script = ExtResource("2_p6gjv")

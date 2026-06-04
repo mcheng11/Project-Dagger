@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cd7htr7fwcmx2"]
+
+[ext_resource type="Script" uid="uid://dwul8st1jeyk0" path="res://Scripts/PlayerController.gd" id="1_5ur5x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ur5x"]
+size = Vector2(133, 128)
+
+[node name="PlayerController" type="CharacterBody2D" unique_id=844307935]
+script = ExtResource("1_5ur5x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2111642024]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_5ur5x")
+
+[node name="CharacterSlot" type="Node2D" parent="." unique_id=1006737850]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1761325631]
