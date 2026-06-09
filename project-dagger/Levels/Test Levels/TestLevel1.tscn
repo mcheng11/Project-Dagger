@@ -10,7 +10,7 @@
 [node name="PlayerController" parent="." unique_id=844307935 instance=ExtResource("1_netpn")]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=66822123]
-position = Vector2(-8.4999695, 446)
+position = Vector2(1, 463)
 scale = Vector2(9.648437, 1.703125)
 texture = ExtResource("2_31ebv")
 
