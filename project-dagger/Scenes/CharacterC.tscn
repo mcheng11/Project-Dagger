@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://d4myvf2mwdyh1"]
+
+[ext_resource type="Texture2D" uid="uid://dfe5e7tuwcvmn" path="res://icon.svg" id="1_p64sr"]
+[ext_resource type="Script" uid="uid://bhe7cj05rdn87" path="res://CharacterC.gd" id="2_vidc0"]
+
+[node name="Sprite2D" type="Sprite2D" unique_id=261082067]
+texture = ExtResource("1_p64sr")
+vframes = 3
+script = ExtResource("2_vidc0")
