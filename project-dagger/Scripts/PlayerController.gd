@@ -56,7 +56,7 @@ func _input(event: InputEvent) -> void:
 			KEY_4:
 				if CHARACTERS.size() > 3:
 					swap_to(3)
-
+	
 	# Ability
 	if event.is_action_pressed("ability") and current_character:
 		current_character.use_ability(self)
@@ -64,22 +64,22 @@ func _input(event: InputEvent) -> void:
 func _physics_process(delta: float) -> void:
 	if not current_character:
 		return
-
+	
 	# Gravity
 	if not is_on_floor():
 		velocity.y += GRAVITY * delta
 	else:
 		can_jump = true
-
+	
 	# Movement
 	var dir := Input.get_axis("move_left", "move_right")
 	velocity.x = dir * current_character.move_speed
-
+	
 	# Jump + double jump
 	if Input.is_action_just_pressed("jump") and can_jump:
 		velocity.y = -current_character.jump_force
 		can_jump = false
 		if current_character.double_jump:
 			can_jump = true
-
+	
 	move_and_slide()
