@@ -1,9 +1,73 @@
 [gd_scene format=3 uid="uid://b00f7yc86owcq"]
 
-[ext_resource type="Texture2D" uid="uid://dfe5e7tuwcvmn" path="res://icon.svg" id="1_u135x"]
-[ext_resource type="Script" uid="uid://05udokb76qgh" path="res://CharacterB.gd" id="2_p6gjv"]
+[ext_resource type="Texture2D" uid="uid://deb8663yxyhx2" path="res://TEMP Assets/temp character assets/Samurai/Walk.png" id="1_u135x"]
+[ext_resource type="Script" uid="uid://05udokb76qgh" path="res://Scripts/CharacterB.gd" id="2_p6gjv"]
 
-[node name="Character B" type="Sprite2D" unique_id=1042527097]
-texture = ExtResource("1_u135x")
-flip_v = true
+[sub_resource type="AtlasTexture" id="AtlasTexture_p6gjv"]
+atlas = ExtResource("1_u135x")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uvht8"]
+atlas = ExtResource("1_u135x")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqayx"]
+atlas = ExtResource("1_u135x")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_opixk"]
+atlas = ExtResource("1_u135x")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_duuwn"]
+atlas = ExtResource("1_u135x")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oa5ko"]
+atlas = ExtResource("1_u135x")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11o3j"]
+atlas = ExtResource("1_u135x")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydgjf"]
+atlas = ExtResource("1_u135x")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bgfkt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p6gjv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uvht8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iqayx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_opixk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_duuwn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oa5ko")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11o3j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydgjf")
+}],
+"loop": false,
+"name": &"walk",
+"speed": 7.0
+}]
+
+[node name="Character B" type="AnimatedSprite2D" unique_id=1645425043]
+sprite_frames = SubResource("SpriteFrames_bgfkt")
+animation = &"walk"
 script = ExtResource("2_p6gjv")

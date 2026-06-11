@@ -82,4 +82,6 @@ func _physics_process(delta: float) -> void:
 		if current_character.double_jump:
 			can_jump = true
 	
+	current_character.update_animation(velocity)
+	
 	move_and_slide()

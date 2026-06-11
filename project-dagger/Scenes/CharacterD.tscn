@@ -1,10 +1,38 @@
 [gd_scene format=3 uid="uid://bcl16qom8o8gs"]
 
-[ext_resource type="Texture2D" uid="uid://dfe5e7tuwcvmn" path="res://icon.svg" id="1_ncnmj"]
-[ext_resource type="Script" uid="uid://dmb68vjy5fry1" path="res://CharacterD.gd" id="2_2hceu"]
+[ext_resource type="Texture2D" uid="uid://phtubke5h0xd" path="res://TEMP Assets/Copilot_20260611_032837.png" id="1_ncnmj"]
+[ext_resource type="Script" uid="uid://dmb68vjy5fry1" path="res://Scripts/CharacterD.gd" id="2_2hceu"]
 
-[node name="Sprite2D" type="Sprite2D" unique_id=1562123844]
-texture = ExtResource("1_ncnmj")
-flip_v = true
-vframes = 2
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hceu"]
+atlas = ExtResource("1_ncnmj")
+region = Rect2(0, 468, 323, 234)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rbrk"]
+atlas = ExtResource("1_ncnmj")
+region = Rect2(323, 468, 323, 234)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fhhk"]
+atlas = ExtResource("1_ncnmj")
+region = Rect2(646, 468, 323, 234)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vn42y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2hceu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rbrk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2fhhk")
+}],
+"loop": false,
+"name": &"walk",
+"speed": 7.0
+}]
+
+[node name="Sprite2D" type="AnimatedSprite2D" unique_id=2048134731]
+sprite_frames = SubResource("SpriteFrames_vn42y")
+animation = &"walk"
 script = ExtResource("2_2hceu")
