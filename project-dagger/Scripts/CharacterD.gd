@@ -20,8 +20,9 @@ func update_animation(velocity: Vector2) -> void:
 		sprite.play("walk")
 
 		# Flip when walking left
-		sprite.flip_h = velocity.x < 0
+		sprite.flip_h = velocity.x > 0
 	else:
 		pass
 		# Idle when not moving horizontally
 		#sprite.play("walk")
+	#sprite.fli = velocity.x < 0
